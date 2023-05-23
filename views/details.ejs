@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Details</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <%-include('partials/header') %>
+      <!-- HEADER -->
+      <!-- SIDEBAR -->
+      <%-include('partials/sidebar') %>
+      <!-- SIDEBAR -->
+      <main class="main">
+        <h3>Course Details</h3>
+        <a href="/instructor/updateCourse/<%= details._id %>">edit</a>
+        <a href="/instructor/deleteCourse/<%= details._id %>">delete</a>
+        <div class="details-box">
+          <h2 class="details-text">Course Title:</h2>
+          <h3 class="details-sub-text"><%= details.name %></h3>
+
+          <h2 class="details-text">Course Description:</h2>
+          <h3 class="details-sub-text"><%= details.description %></h3>
+
+          <h2 class="details-text">classroom:</h2>
+          <h3 class="details-sub-text"><%= details.classroom %></h3>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

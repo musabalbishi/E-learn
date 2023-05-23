@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Wix Madefor Display", sans-serif;
+  height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 5rem 1fr;
+  height: 100vh;
+}
+.wrapper .header {
+  grid-column: 2/3;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .header .inst-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wrapper .header .inst-box .inst-img {
+  height: 2rem;
+  width: 2rem;
+  background-color: #0f0c29;
+  border-radius: 50%;
+}
+.wrapper .header nav ul {
+  list-style: none;
+}
+.wrapper .header nav ul a:link,
+.wrapper .header nav ul a:active,
+.wrapper .header nav ul a:visited {
+  text-decoration: none;
+}
+.wrapper .header nav ul .logout-btn {
+  background-color: #d72929;
+  padding: 1rem 1.8rem;
+  border-radius: 10px;
+}
+.wrapper .header nav ul .logout-btn a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.wrapper .header nav ul .logout-btn .icon {
+  color: #fff;
+}
+.wrapper .sidebar {
+  grid-column: 1;
+  grid-row: 1/3;
+  border-right: 1px solid #ddd;
+}
+.wrapper .main .main-content {
+  background-color: #fff;
+  height: 10rem;
+  width: 15rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px -14px rgba(0, 0, 0, 0.2);
+}
+.wrapper .main .details-text {
+  border: 1px solid #0f0c29;
+}
+
+.cards {
+  display: flex;
+}
+.cards .c-card {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2rem;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="inst-box">
+    <div class="inst-img"></div>
+    <h3>welcome, <%= instructor.username %></h3>
+  </div>
+  <nav class="nav">
+    <ul>
+      <% if (instructor) { %>
+      <li class="logout-btn btn">
+        <box-icon type="solid" name="log-out" class="icon"></box-icon>
+        <a href="/instructor/logout">logout</a>
+      </li>
+
+      <% }else{ %>
+      <li><a href="/instructor/login">login</a></li>
+      <li><a href="/instructor/register">register</a></li>
+    </ul>
+    <% } %>
+  </nav>
+</header>

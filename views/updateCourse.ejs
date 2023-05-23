@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>update</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <%-include('partials/header') %>
+      <!-- HEADER -->
+
+      <!-- SIDEBAR -->
+      <%-include('partials/sidebar') %>
+      <!-- SIDEBAR -->
+
+      <main class="main">
+        <div class="form-wrapper">
+          <form
+            action="/instructor/updateCourse/<%= course._id  %>"
+            class="form"
+            method="post"
+          >
+            <label>name:</label>
+            <input
+              type="text"
+              name="name"
+              required
+              value="<%= course.name %>"
+            />
+            <label>description:</label>
+            <input
+              type="text"
+              name="description"
+              value="<%=course.description %>"
+              required
+            />
+            <label>classroom:</label>
+            <input
+              type="text"
+              name="classroom"
+              value="<%=course.classroom %>"
+              required
+            />
+            <button type="submit">update course</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
