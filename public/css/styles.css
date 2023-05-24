@@ -79,4 +79,94 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   padding: 2rem;
+}
+
+.section {
+  height: 100vh;
+  padding: 1rem 2rem;
+}
+
+.hero-section .hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-section .hero-header .logo {
+  display: flex;
+  align-items: center;
+}
+.hero-section .hero-header .logo .title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.hero-section .hero-header .hero-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-section .hero-header .hero-nav a:link,
+.hero-section .hero-header .hero-nav a:active,
+.hero-section .hero-header .hero-nav a:visited {
+  text-decoration: none;
+}
+.hero-section .hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-section .hero-wrapper .hero-img-box {
+  height: 50%;
+}
+.hero-section .hero-wrapper .hero-img-box img {
+  height: 50%;
+}
+.hero-section .hero-wrapper .hero-paragraph {
+  color: #222;
+}
+.hero-section .hero-wrapper .hero-paragraph a:link,
+.hero-section .hero-wrapper .hero-paragraph a:active,
+.hero-section .hero-wrapper .hero-paragraph a:visited {
+  text-decoration: none;
+}
+.hero-section .hero-wrapper .hero-paragraph p {
+  font-size: 2.3rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-align: left;
+}
+.hero-section .hero-wrapper .hero-paragraph h3 {
+  margin-bottom: 3rem;
+}
+.hero-section .hero-wrapper .hero-paragraph .start-btn {
+  padding: 1rem;
+  background-color: #0f0c29;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.features-section {
+  background-color: #dddada;
+}
+.features-section .feature-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.features-section .feature-wrapper h3 {
+  color: #d72929;
+}
+.features-section .feature-wrapper .feature-card-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.features-section .feature-wrapper .feature-card-box .feature-card {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.features-section .feature-wrapper .feature-card-box .feature-card .icon-box {
+  border-radius: 50%;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=styles.css.map */

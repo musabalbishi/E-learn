@@ -1,10 +1,13 @@
 const router = require("express").Router();
 const { verifyToken, checkInstructor } = require("../middleware/verifyToken");
 const Controller = require("../controller/authController");
-//
+//landing page
+router.get("/", (req, res) => {
+  res.render("landingPage.ejs");
+});
 
 // dashboard
-router.get("/", verifyToken, checkInstructor, async (req, res) => {
+router.get("/dashboard", verifyToken, checkInstructor, async (req, res) => {
   res.render("dashboard.ejs");
 });
 // register instructor

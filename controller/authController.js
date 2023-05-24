@@ -11,6 +11,8 @@ const createToken = (id) => {
 };
 
 module.exports = {
+  // get landing page
+  // getLandingPage:
   //create instructor
   getRegisterPage: (req, res) => {
     res.render("regForm.ejs");
@@ -59,7 +61,7 @@ module.exports = {
       const token = createToken(instructor._id);
       res.cookie("jwt", token, { httpOnly: true });
       // res.send({ instructor: instructor._id });
-      res.redirect("/instructor/");
+      res.redirect("/instructor/dashboard");
     } else {
       return res.json({ error: "wrong password" });
     }
@@ -80,7 +82,7 @@ module.exports = {
         courses: course._id,
       },
     });
-    res.redirect("/instructor/");
+    res.redirect("/instructor/dashboard");
   },
 
   // update course
@@ -94,16 +96,16 @@ module.exports = {
       description: req.body.description,
       classroom: req.body.classroom,
     });
-    res.redirect("/instructor/");
+    res.redirect("/instructor/dashboard");
   },
 
   deleteCourse: async (req, res) => {
     const deletedCourse = await Course.findById(req.params.id);
-    await Instructor.findByIdAndUpdate("646c941689950089163b4fcf", {
+    await Instructor.findByIdAndUpdate(res.locals.instructor._id, {
       $pull: { courses: deletedCourse._id },
     });
     await Course.findByIdAndDelete(req.params.id);
-    res.redirect("/instructor/");
+    res.redirect("/instructor/dashboard");
   },
 
   // get courses
