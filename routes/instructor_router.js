@@ -1,9 +1,4 @@
 const router = require("express").Router();
-const Instructor = require("../models/Instructor");
-const Course = require("../models/Course");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const salt = 10;
 const { verifyToken, checkInstructor } = require("../middleware/verifyToken");
 const Controller = require("../controller/authController");
 //

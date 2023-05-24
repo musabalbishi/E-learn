@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const instructorSchema = new Schema({
-  username: {
+const studentSchema = new Schema({
+  studentName: {
     type: String,
     required: true,
   },
@@ -11,19 +11,19 @@ const instructorSchema = new Schema({
     type: String,
     required: true,
   },
-  phone: {
-    type: String,
-    required: true,
-    min: [9, "must be 9 numbers"],
-    max: [9, "must be 9 numbers"],
-  },
   password: {
     type: String,
     required: true,
     min: [6, "must be atleast 6 charachters"],
   },
+  courses: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Course",
+    },
+  ],
 });
 
-const Instructor = mongoose.model("Instructor", instructorSchema);
+const Student = mongoose.model("Student", studentSchema);
 
-module.exports = Instructor;
+module.exports = Student;

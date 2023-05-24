@@ -1,14 +1,15 @@
 const Instructor = require("../models/Instructor");
 const Course = require("../models/Course");
 const jwt = require("jsonwebtoken");
-const cookie = require("cookie-parser");
 const { registerationValidation, loginValidation } = require("../validations");
 const bcrypt = require("bcrypt");
-
+const dotenv = require("dotenv").config();
 const salt = 10;
+
 const createToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_TOKEN);
 };
+
 module.exports = {
   //create instructor
   getRegisterPage: (req, res) => {
@@ -38,8 +39,7 @@ module.exports = {
     });
     const token = createToken(instructor._id);
     res.cookie("jwt", token, { httpOnly: true });
-    res.status(201).json({ instructor: instructor._id });
-    //   res.redirect("/instructor/login");
+    res.redirect("/instructor/login");
   },
   //login
   getLoginPage: (req, res) => {
