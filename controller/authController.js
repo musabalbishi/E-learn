@@ -101,6 +101,7 @@ module.exports = {
 
   deleteCourse: async (req, res) => {
     const deletedCourse = await Course.findById(req.params.id);
+    // console.log(`mmmmmm ${res.locals.instructor._id}`);
     await Instructor.findByIdAndUpdate(res.locals.instructor._id, {
       $pull: { courses: deletedCourse._id },
     });
@@ -114,6 +115,14 @@ module.exports = {
       "courses"
     );
     res.render("myCourses.ejs", { det: cDetails });
+  },
+
+  getDashboard: async (req, res) => {
+    sDetails = await Instructor.findById(res.locals.instructor._id).populate(
+      "courses students"
+    );
+    console.log(sDetails);
+    res.render("dashboard.ejs", { details: sDetails });
   },
   // details page
   getDetails: async (req, res) => {

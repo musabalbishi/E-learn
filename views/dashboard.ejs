@@ -26,10 +26,19 @@
 
       <!-- MAIN -->
       <main class="main">
+        <p>statistics</p>
         <div class="main-content">
-          <div class="info-box"></div>
-          <div class="info-box"></div>
-          <div class="info-box"></div>
+          <!--  -->
+          <div class="info-box">
+            <% let numOfStudents= details.students.length %>
+            <p><%= numOfStudents %> students</p>
+          </div>
+
+          <div class="info-box">
+            <% let numOfCourses = details.courses.length %>
+            <p><%= numOfCourses %> courses</p>
+
+          <!--  -->
         </div>
       </main>
       <!-- MAIN -->

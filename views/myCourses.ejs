@@ -22,10 +22,11 @@
       <div class="cards">
         <% for( let i = 0; i < det.courses.length; i++ ) { %>
           <div class="c-card">
-            <h3><%= det.courses[i]['name'] %></h3>
-            <h3><%= det.courses[i]['description'] %></h3>
-            <h3><%= det.courses[i]['classroom'] %></h3>
-            <a href="/instructor/details/<%= det.courses[i]['_id'] %>">details</a>
+        
+              <div class="c-info">
+                <p class="c-title"><%= det.courses[i]['name'] %></p>
+                <a href="/instructor/details/<%= det.courses[i]['_id'] %>">details</a>
+              </div>
           </div>
           
           <% } %>

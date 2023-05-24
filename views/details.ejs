@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Details</title>
   </head>
@@ -16,18 +22,22 @@
       <%-include('partials/sidebar') %>
       <!-- SIDEBAR -->
       <main class="main">
-        <h3>Course Details</h3>
-        <a href="/instructor/updateCourse/<%= details._id %>">edit</a>
-        <a href="/instructor/deleteCourse/<%= details._id %>">delete</a>
+        <div class="c-control">
+          <p>Course Details</p>
+          <div class="c-btns">
+            <a href="/instructor/updateCourse/<%= details._id %>">edit</a>
+            <a href="/instructor/deleteCourse/<%= details._id %>">delete</a>
+          </div>
+        </div>
         <div class="details-box">
-          <h2 class="details-text">Course Title:</h2>
-          <h3 class="details-sub-text"><%= details.name %></h3>
+          <p class="details-text">Course Title:</p>
+          <p class="details-sub-text"><%= details.name %></p>
 
-          <h2 class="details-text">Course Description:</h2>
-          <h3 class="details-sub-text"><%= details.description %></h3>
+          <p class="details-text">Course Description:</p>
+          <p class="details-sub-text"><%= details.description %></p>
 
-          <h2 class="details-text">classroom:</h2>
-          <h3 class="details-sub-text"><%= details.classroom %></h3>
+          <p class="details-text">classroom:</p>
+          <p class="details-sub-text"><%= details.classroom %></p>
         </div>
       </main>
     </div>

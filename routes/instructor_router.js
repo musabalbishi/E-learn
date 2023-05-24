@@ -7,9 +7,7 @@ router.get("/", (req, res) => {
 });
 
 // dashboard
-router.get("/dashboard", verifyToken, checkInstructor, async (req, res) => {
-  res.render("dashboard.ejs");
-});
+router.get("/dashboard", checkInstructor, Controller.getDashboard);
 // register instructor
 router.get("/register", Controller.getRegisterPage);
 router.post("/register", Controller.createInstructor);
@@ -39,8 +37,7 @@ router.post(
 );
 
 // Delete the course
-router.get("/deleteCourse/:id", Controller.deleteCourse);
-
+router.get("/deleteCourse/:id", checkInstructor, Controller.deleteCourse);
 //
 router.get("/myCourses", checkInstructor, Controller.getCourses);
 // logout
