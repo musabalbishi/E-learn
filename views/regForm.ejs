@@ -4,21 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Document</title>
   </head>
   <body>
+    <%- include('partials/formHeader') %>
+    <!--  -->
     <div class="form-wrapper">
-      <form action="/instructor/register" class="form" method="post">
-        <label>username:</label>
-        <input type="text" name="username" required />
-        <label>email:</label>
-        <input type="text" name="email" required />
-        <label>phone:</label>
-        <input type="number" name="phone" required />
-        <label>password:</label>
-        <input type="password" name="password" required />
-        <button type="submit">Register</button>
-      </form>
+      <div class="form-container">
+        <h2>Register</h2>
+        <form action="/instructor/login" class="form" method="post">
+          <label>username:</label>
+          <input
+            type="text"
+            name="username"
+            required
+            placeholder="enter your username..."
+          />
+          <label>email:</label>
+          <input
+            type="text"
+            name="email"
+            required
+            placeholder="enter your email"
+          />
+
+          <label>phone:</label>
+          <div class="phone-from-group">
+            <div class="zip">
+              <div class="flag">
+                <img src="/img/sa.png" alt="" />
+                <p>+966</p>
+                <div class="vl"></div>
+              </div>
+            </div>
+            <input
+              type="number"
+              name="phone"
+              required
+              placeholder="enter your phone number"
+            />
+          </div>
+          <label>password:</label>
+          <input
+            type="password"
+            name="password"
+            required
+            placeholder="enter your password"
+          />
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
+
+    <!-- --------------------------------- -->
   </body>
 </html>
