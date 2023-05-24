@@ -24,35 +24,36 @@
       <!-- SIDEBAR -->
 
       <main class="main">
+        <p class="u-course">Update Course</p>
         <div class="form-wrapper">
-          <form
-            action="/instructor/updateCourse/<%= course._id  %>"
-            class="form"
-            method="post"
-          >
-            <label>name:</label>
-            <input
-              type="text"
-              name="name"
-              required
-              value="<%= course.name %>"
-            />
-            <label>description:</label>
-            <input
-              type="text"
-              name="description"
-              value="<%=course.description %>"
-              required
-            />
-            <label>classroom:</label>
-            <input
-              type="text"
-              name="classroom"
-              value="<%=course.classroom %>"
-              required
-            />
-            <button type="submit">update course</button>
-          </form>
+          <div class="form-container">
+            <form
+              action="/instructor/updateCourse/<%= course._id  %>"
+              class="form"
+              method="post"
+            >
+              <label>name:</label>
+              <input
+                type="text"
+                name="name"
+                required
+                value="<%= course.name %>"
+              />
+              <label>description:</label>
+              <textarea name="description" cols="30" rows="10">
+                <%= course.description %>
+              </textarea>
+
+              <label>classroom:</label>
+              <input
+                type="text"
+                name="classroom"
+                value="<%=course.classroom %>"
+                required
+              />
+              <button type="submit">update course</button>
+            </form>
+          </div>
         </div>
       </main>
     </div>

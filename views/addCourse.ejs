@@ -4,19 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>add course</title>
   </head>
   <body>
-    <div class="form-wrapper">
-      <form action="/instructor/addCourse" class="form" method="post">
-        <label>name:</label>
-        <input type="text" name="name" required />
-        <label>description:</label>
-        <input type="text" name="description" required />
-        <label>classroom:</label>
-        <input type="text" name="classroom" required />
-        <button type="submit">add course</button>
-      </form>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <%-include('partials/header') %>
+      <!-- HEADER -->
+
+      <!-- SIDEBAR -->
+      <%-include('partials/sidebar') %>
+      <!-- SIDEBAR -->
+      <main class="main">
+        <p class="u-course">Add Course</p>
+        <div class="form-wrapper">
+          <div class="form-container">
+            <form action="/instructor/addCourse" class="form" method="post">
+              <label>name:</label>
+              <input type="text" name="name" required />
+              <label>description:</label>
+              <textarea name="description" cols="30" rows="10"></textarea>
+              <label>classroom:</label>
+              <input type="text" name="classroom" required />
+              <button type="submit">Add course</button>
+            </form>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

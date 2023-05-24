@@ -19,19 +19,22 @@
       <!-- SIDEBAR -->
       <%-include('partials/sidebar') %>
       <!-- SIDEBAR -->
-      <div class="cards">
-        <% for( let i = 0; i < det.courses.length; i++ ) { %>
+      <main class="main">
+        <p class="u-course">My Courses</p>
+
+        <div class="cards">
+          <% for( let i = 0; i < det.courses.length; i++ ) { %>
           <div class="c-card">
-        
-              <div class="c-info">
-                <p class="c-title"><%= det.courses[i]['name'] %></p>
-                <a href="/instructor/details/<%= det.courses[i]['_id'] %>">details</a>
-              </div>
+            <div class="c-info">
+              <p class="c-title"><%= det.courses[i]['name'] %></p>
+              <a href="/instructor/details/<%= det.courses[i]['_id'] %>"
+                >details</a
+              >
+            </div>
           </div>
-          
           <% } %>
         </div>
-        
-          
+      </main>
+    </div>
   </body>
 </html>

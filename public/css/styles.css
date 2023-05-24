@@ -9,6 +9,12 @@ body {
   height: 100vh;
 }
 
+textarea {
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 20rem 1fr;
@@ -131,16 +137,14 @@ body {
 }
 
 .cards {
-  display: flex;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
 }
 .cards .c-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 1rem;
   height: 10rem;
-  width: 16rem;
-  padding: 2rem 1rem;
   border-radius: 10px;
   background-color: #d4e0ea;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -156,7 +160,6 @@ body {
   background-color: #dddada;
   border-radius: 10px;
   padding: 1rem;
-  margin: 0 2.5rem;
   font-weight: 500;
 }
 .cards .c-card .c-title {
@@ -175,7 +178,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid #ccc;
 }
 .c-control .c-btns a:link,
 .c-control .c-btns a:active,
@@ -199,7 +203,18 @@ body {
 }
 
 .details-box {
-  border: 1px solid #0f0c29;
+  padding: 1.5rem 0;
+}
+.details-box .details-text {
+  font-weight: 500;
+}
+.details-box .details-sub-text {
+  border-radius: 10px;
+  padding: 0 2rem;
+}
+
+.u-course {
+  border-bottom: 1px solid #ccc;
 }
 
 .section {
