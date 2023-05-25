@@ -130,6 +130,12 @@ module.exports = {
     res.render("details.ejs", { details: courseDetails });
   },
 
+  getStudents: async (req, res) => {
+    instDetails = await Instructor.findById(res.locals.instructor._id).populate(
+      "students courses"
+    );
+    res.render("myStudents.ejs", { student: instDetails });
+  },
   // assignment
   // getAssignment:
 

@@ -13,6 +13,7 @@ textarea {
   border: none;
   border-radius: 10px;
   margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .wrapper {
@@ -41,26 +42,21 @@ textarea {
   background-color: #0f0c29;
   border-radius: 50%;
 }
-.wrapper .header nav ul {
+.wrapper .header .nav ul {
   list-style: none;
 }
-.wrapper .header nav ul a:link,
-.wrapper .header nav ul a:active,
-.wrapper .header nav ul a:visited {
+.wrapper .header .nav ul a:link,
+.wrapper .header .nav ul a:active,
+.wrapper .header .nav ul a:visited {
   text-decoration: none;
 }
-.wrapper .header nav ul .logout-btn {
-  background-color: #d72929;
-  padding: 1rem 1.8rem;
-  border-radius: 10px;
-}
-.wrapper .header nav ul .logout-btn a {
-  color: #fff;
+.wrapper .header .nav ul .logoutt-btn a {
+  border: 1px solid #d72929;
+  color: #d72929;
   font-size: 1.1rem;
   font-weight: 600;
-}
-.wrapper .header nav ul .logout-btn .icon {
-  color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
 }
 .wrapper .sidebar {
   grid-column: 1;
@@ -134,6 +130,20 @@ textarea {
   height: 10rem;
   width: 15rem;
   border-radius: 10px;
+}
+
+.table {
+  width: 100%;
+  background-color: #d4e0ea;
+}
+.table .top-tr th {
+  padding: 1rem 0;
+  border-bottom: 1px solid #aaa;
+}
+.table .data td {
+  padding: 0.5rem 0;
+  text-align: center;
+  background-color: #ddd;
 }
 
 .cards {

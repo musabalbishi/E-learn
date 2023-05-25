@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <%-include('partials/header') %>
+      <!-- HEADER -->
+
+      <!-- SIDEBAR -->
+      <%-include('partials/sidebar') %>
+      <!-- SIDEBAR -->
+
+      <main class="main">
+        <p>My Students</p>
+
+        <!--  -->
+
+        <table class="table">
+          <tr class="top-tr">
+            <th>name</th>
+            <th>email</th>
+            <th>course</th>
+          </tr>
+          <tr class="data">
+            <% for( let i = 0; i < student.students.length; i++ ) { %>
+            <td><%= student.students[i]['studentName'] %></td>
+            <td><%= student.students[i]['email'] %></td>
+            <% for( let i = 0; i < student.courses.length; i++ ) { %>
+            <td><%= student.courses[i]['name'] %></td>
+
+            <% } %> <% } %>
+          </tr>
+        </table>
+        <!--  -->
+      </main>
+    </div>
+  </body>
+</html>

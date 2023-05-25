@@ -24,6 +24,7 @@ textarea {
   border: none;
   border-radius: $br-10;
   margin-bottom: 1rem;
+  padding: 1rem;
 }
 .wrapper {
   display: grid;
@@ -57,17 +58,15 @@ textarea {
     .nav {
       ul {
         list-style: none;
-        // @include anchor-style();
+        @include anchor-style();
         .logoutt-btn {
-          display: flex;
-          align-items: center;
-          border-radius: $br10;
-          border: 1px solid #333;
-          padding: 1rem;
-
           a {
+            border: 1px solid #d72929;
+            color: #d72929;
             font-size: 1.1rem;
             font-weight: 600;
+            border-radius: $br-10;
+            padding: 1rem;
           }
         }
       }
@@ -148,6 +147,20 @@ textarea {
         border-radius: $br-10;
       }
     }
+  }
+}
+
+.table {
+  width: 100%;
+  background-color: #d4e0ea;
+  .top-tr th {
+    padding: 1rem 0;
+    border-bottom: 1px solid #aaa;
+  }
+  .data td {
+    padding: 0.5rem 0;
+    text-align: center;
+    background-color: #ddd;
   }
 }
 

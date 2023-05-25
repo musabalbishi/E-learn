@@ -39,6 +39,9 @@ router.post(
 // Delete the course
 router.get("/deleteCourse/:id", checkInstructor, Controller.deleteCourse);
 //
+
+// get students
+router.get("/myStudents", checkInstructor, Controller.getStudents);
 router.get("/myCourses", checkInstructor, Controller.getCourses);
 // logout
 router.get("/logout", (req, res) => {
