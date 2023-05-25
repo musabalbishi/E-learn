@@ -3,7 +3,7 @@
 an application or web-based technology used to plan, implement a specific learning process,
 it have the soul purpose of making the educational process easier, more efficient and enhance communication amongst the parties envolved.
 
-[!demo]('https://raw.githubusercontent.com/musabalbishi/musab-albishi-js-bootcamp-backend-final-project/master/public/img/sub-img/dash.png?token=GHSAT0AAAAAACBUPH3UNL2W4S5EINYH432IZDPAJFQ')
+[!demo](https://raw.githubusercontent.com/musabalbishi/musab-albishi-js-bootcamp-backend-final-project/master/public/img/sub-img/dash.png?token=GHSAT0AAAAAACBUPH3UNL2W4S5EINYH432IZDPAJFQ)
 
 ## Key Dependencies
 
