@@ -6,13 +6,14 @@
   <nav class="nav">
     <ul>
       <% if (instructor) { %>
-      <li class="logout-btn btn">
-        <!-- <div class="logout-btn"> -->
+      <!-- <li class="logout-btn btn"> -->
+      <div class="logoutt-btn">
         <a href="/instructor/logout">
           <box-icon type="solid" name="log-out" class="icon"></box-icon>
+          logout
         </a>
-        <!-- </div> -->
-      </li>
+      </div>
+      <!-- </li> -->
 
       <% }else{ %>
       <li><a href="/instructor/login">login</a></li>

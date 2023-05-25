@@ -57,15 +57,19 @@ textarea {
     .nav {
       ul {
         list-style: none;
-        @include anchor-style();
+        // @include anchor-style();
+        .logoutt-btn {
+          display: flex;
+          align-items: center;
+          border-radius: $br10;
+          border: 1px solid #333;
+          padding: 1rem;
 
-        // .logout-btn {
-        //   border-radius: $br -10;
-        //   a {
-        //     font-size: 1.1rem;
-        //     font-weight: 600;
-        //   }
-        // }
+          a {
+            font-size: 1.1rem;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
