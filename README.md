@@ -5,6 +5,7 @@ A learning management system with the soul purpose of making the educational pro
 ## Key Dependencies
 
 - [Joi](https://joi.dev/api/?v=17.9.1) a lightweight validation package describe your data using a simple, intuitive, and readable language.
+- [JWT](https://jwt.io/) json web token is an open source dependency used for Authorization and authentication using a cyphering method enabling the routes to be protected.
 
 ## Installing Dependencies
 
