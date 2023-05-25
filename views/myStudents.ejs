@@ -34,8 +34,8 @@
             <th>email</th>
             <th>course</th>
           </tr>
+          <% for( let i = 0; i < student.students.length; i++ ) { %>
           <tr class="data">
-            <% for( let i = 0; i < student.students.length; i++ ) { %>
             <td><%= student.students[i]['studentName'] %></td>
             <td><%= student.students[i]['email'] %></td>
             <% for( let i = 0; i < student.courses.length; i++ ) { %>
