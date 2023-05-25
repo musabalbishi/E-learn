@@ -129,4 +129,9 @@ module.exports = {
     const courseDetails = await Course.findById(req.params.courseId);
     res.render("details.ejs", { details: courseDetails });
   },
+
+  // assignment
+  // getAssignment:
+
+  // addAssignment:
 };
