@@ -1,17 +1,16 @@
 <header class="header">
   <div class="inst-box">
-    <!-- <box-icon class="side-icon menu-btn" name="menu" type="solid"></box-icon> -->
-    <!-- <box-icon class="side-icon x-btn" name="x" type="solid"></box-icon> -->
-
     <div class="inst-img"></div>
     <h3>welcome, <%= instructor.username %></h3>
   </div>
   <nav class="nav">
     <ul>
       <% if (instructor) { %>
-      <li class="logout-btn btn">
-        <box-icon type="solid" name="log-out" class="icon"></box-icon>
-        <a href="/instructor/logout">logout</a>
+      <!-- <li class="logout-btn btn"> -->
+        <a href="/instructor/logout">
+          <box-icon type="solid" name="log-out" class="icon"></box-icon>
+
+        </a>
       </li>
 
       <% }else{ %>

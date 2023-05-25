@@ -1,11 +1,13 @@
 # E-Learn
 
-A learning management system with the soul purpose of making the educational process easier and more efficient, with a
+an application or web-based technology used to plan, implement a specific learning process,
+it have the soul purpose of making the educational process easier, more efficient and enhance communication amongst the parties envolved.
 
 ## Key Dependencies
 
-- [Joi](https://joi.dev/api/?v=17.9.1) a lightweight validation package describe your data using a simple, intuitive, and readable language.
-- [JWT](https://jwt.io/) json web token is an open source dependency used for Authorization and authentication using a cyphering method enabling the routes to be protected.
+- [Joi](https://joi.dev/api/?v=17.9.1) - a lightweight validation package describe your data using a simple, intuitive, and readable language.
+- [JWT](https://jwt.io/) - json web token is an open source dependency used for Authorization and authentication using a cyphering method enabling the routes to be protected.
+- [Bcrypt] () - a password-hashing function based on the Blowfish cipher.
 
 ## Installing Dependencies
 
