@@ -54,22 +54,16 @@ textarea {
       }
     }
 
-    nav {
+    .nav {
       ul {
         list-style: none;
         @include anchor-style();
 
         // .logout-btn {
-        //   background-color: #d72929;
-        //   padding: 1rem 1.8rem;
-        //   border-radius: $br-10;
+        //   border-radius: $br -10;
         //   a {
-        //     color: #fff;
         //     font-size: 1.1rem;
         //     font-weight: 600;
-        //   }
-        //   .icon {
-        //     color: #fff;
         //   }
         // }
       }
